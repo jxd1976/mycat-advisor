@@ -3,6 +3,7 @@
 cd `dirname $0`
 
 yum -y update; yum clean all
+yum -y install gcc
 # Install modules
 for m in os scm zsh jdk8 maven mycat mysql nginx php phpmyadmin tomcat probe zookeeper redis; do
     if [ -d ${m} ]; then
